@@ -1,6 +1,8 @@
-const { createCanvas, loadImage } = require('canvas');
+const { createCanvas, loadImage, registerFont } = require('canvas');
 const djs = require('discord.js');
 const fs = require('fs');
+
+registerFont('MountainsofChristmas-Bold.ttf', { family: 'sans-sherif' })
 
 let calculateChristmasCountdown = () => {
     var now = new Date();
