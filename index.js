@@ -73,4 +73,4 @@ client.on('messageCreate', async (msg) => {
     }
 })
 
-client.login(require('config.json').TOKEN);
+client.login(require('./config.json').TOKEN);
