@@ -68,10 +68,9 @@ client.once('ready', async () => {
 
 client.on('messageCreate', async (msg) => {
     if(msg.content === '!countdown' || msg.content === '!c'){
-        let attachment = new djs.MessageAttachment(await genCanvasText(calculateChristmasCountdown(), '60'), 'countdown.png');
-        let channel = client.channels.cache.get('838794212870193222');
+        let attachment = new djs.MessageAttachment(await genCanvasText(calculateChristmasCountdown(), '70'), 'countdown.png');
 
-        channel.send({ files: [ attachment ] });
+        msg.channel.send({ files: [ attachment ] });
     }
 })
 
